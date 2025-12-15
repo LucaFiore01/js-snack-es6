@@ -11,4 +11,16 @@ const bici = [
     { nome: 'Bici5', peso: 8.0 }
 ];
 
+// Passo 2: Inizializzare una variabile per tenere traccia della bici con il peso minore
+// Partiamo assumendo che la prima bici sia quella con peso minore
+let biciLeggera = bici[0];
+
+// Passo 3: Ciclo attraverso l'array per confrontare i pesi
+// Per ogni bici nell'array, controlliamo se il suo peso è minore di quello della bici attualmente considerata leggera
+for (let i = 1; i < bici.length; i++) {
+    if (bici[i].peso < biciLeggera.peso) {
+        biciLeggera = bici[i];
+    }
+}
+
 

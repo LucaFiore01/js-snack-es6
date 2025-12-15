@@ -23,4 +23,8 @@ for (let i = 1; i < bici.length; i++) {
     }
 }
 
+// Passo 4: Stampare a schermo la bici con il peso minore
+// Utilizziamo console.log per mostrare il nome e il peso della bici più leggera
+console.log(`La bici con il peso minore è: ${biciLeggera.nome}, con un peso di ${biciLeggera.peso} kg.`);
+
 

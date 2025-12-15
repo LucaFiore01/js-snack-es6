@@ -35,7 +35,6 @@ console.log(`La bici con il peso minore è: ${biciLeggera.nome}, con un peso di 
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
-
 // Passo 1: Creare un array di oggetti rappresentanti le squadre di calcio
 // Ogni oggetto avrà le proprietà 'nome', 'puntiFatti' (inizialmente 0), 'falliSubiti' (inizialmente 0)
 const squadre = [
@@ -46,5 +45,23 @@ const squadre = [
     { nome: 'Napoli', puntiFatti: 0, falliSubiti: 0 }
 ];
 
+// Passo 2: Generare numeri random per 'puntiFatti' e 'falliSubiti'
+// Utilizziamo Math.random() per generare numeri interi casuali tra 0 e 100
+squadre.forEach(squadra => {
+    squadra.puntiFatti = Math.floor(Math.random() * 101); // Numero random da 0 a 100
+    squadra.falliSubiti = Math.floor(Math.random() * 101); // Numero random da 0 a 100
+});
+
+// Passo 3: Creare un nuovo array contenente solo 'nome' e 'falliSubiti'
+// Utilizziamo map() per creare un nuovo array con gli elementi desiderati
+const squadreRidotte = squadre.map(squadra => ({
+    nome: squadra.nome,
+    falliSubiti: squadra.falliSubiti
+}));
+
+// Passo 4: Stampare tutto in console
+// Stampiamo l'array originale e quello ridotto
+console.log('Squadre originali:', squadre);
+console.log('Squadre con solo nome e falli subiti:', squadreRidotte);
 
 
